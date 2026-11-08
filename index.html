@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zoe Lee</title>
+  <meta name="description" content="Zoe Lee — Caltech undergraduate, engineer, researcher.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --surface: #12151a;
+      --border: #1f242c;
+      --text: #d6dbe1;
+      --muted: #7a838f;
+      --accent: #e7ad6e;   /* change this one value to re-theme the page */
+      --accent-dim: rgba(110, 231, 183, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { color-scheme: dark; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 96px 24px 64px;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+    .prompt { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+    .prompt .path { color: var(--accent); }
+
+    h1 {
+      font-size: clamp(28px, 6vw, 40px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 0.55em;
+      height: 1em;
+      background: var(--accent);
+      margin-left: 6px;
+      vertical-align: -0.12em;
+      animation: blink 1.1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+
+    .tagline { color: var(--muted); margin-top: 12px; }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+      list-style: none;
+    }
+    .links a {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text);
+      transition: border-color .15s, background .15s, color .15s;
+    }
+    .links a:hover {
+      border-color: var(--accent);
+      background: var(--accent-dim);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    section { margin-top: 64px; }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: lowercase;
+      margin-bottom: 16px;
+    }
+    h2::before { content: "## "; color: var(--muted); }
+
+    p + p { margin-top: 12px; }
+
+    .list { list-style: none; }
+    .list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .list li:first-child { border-top: 1px solid var(--border); }
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .item-title { font-weight: 500; }
+    .item-meta { color: var(--muted); font-size: 13px; }
+    .item-desc { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+    .tags li {
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 96px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 64px 16px 48px; }
+      body { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <!-- ============ HEADER ============ -->
+    <header>
+      <div class="prompt"><span class="path">~/zoe</span> $ whoami</div>
+      <h1>Zoe Lee<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="tagline">Mechanical Engineering undergraduate @ Caltech '29 · researcher · builder</p>
+
+      <ul class="links">
+        <li><a href="mailto:zlee2@caltech.edu">email</a></li>
+        <li><a href="https://github.com/zlee06dev" target="_blank" rel="noopener">github</a></li>
+        <li><a href="https://www.linkedin.com/in/zoe-lee-caltech" target="_blank" rel="noopener">linkedin</a></li>
+        <li><a href="resume.pdf" target="_blank" rel="noopener">resume.pdf</a></li>
+      </ul>
+    </header>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about">
+      <h2>about</h2>
+      <p>
+        I'm an undergraduate at Caltech working at the intersection of engineering,
+        autonomous systems, and space exploration. I like turning messy ideas into
+        working hardware and software.
+      </p>
+      <p>
+        Currently seeking internships in aerospace, robotics, and AI systems.
+      </p>
+    </section>
+
+    <!-- ============ INTERESTS ============ -->
+    <section id="focus">
+      <h2>focus</h2>
+      <ul class="tags">
+        <li>aerospace engineering</li>
+        <li>robotics</li>
+        <li>multi-agent AI systems</li>
+        <li>human–machine interfaces</li>
+        <li>space exploration</li>
+      </ul>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects">
+      <h2>projects</h2>
+      <ul class="list">
+        <li>
+          <div class="item-head">
+            <span class="item-title"><a href="#">Local multi-agent second brain</a></span>
+            <span class="item-meta">in progress</span>
+          </div>
+          <p class="item-desc">
+            Long-running group of AI agents running locally, integrated with Obsidian
+            for knowledge management.
+          </p>
+        </li>
+        <li>
+          <div class="item-head">
+            <span class="item-title">More coming soon</span>
+            <span class="item-meta">—</span>
+          </div>
+          <p class="item-desc">Write-ups in progress.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ EXPERIENCE ============
+    <section id="experience">
+      <h2>experience</h2>
+      <ul class="list">
+        <li>
+          <div class="item-head">
+            <span class="item-title">Role · Lab / Company</span>
+            <span class="item-meta">2026 – present</span>
+          </div>
+          <p class="item-desc">One line on what I did and the result.</p>
+        </li>
+      </ul>
+    </section>
+    -->
+
+    <footer>
+      <span>© <span id="year">2026</span> Zoe Lee</span>
+      <span>Pasadena, CA · Hoschton, GA</span>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
